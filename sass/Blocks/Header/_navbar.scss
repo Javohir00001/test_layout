@@ -1,0 +1,10 @@
+.nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-image: linear-gradient(to bottom,  #6db1d9 10%,  #1973a7e6 20%, #1973a7 20% 90%, #e4e4e4 90% 100%);
+    -webkit-box-shadow: 0px 0.5px rgb(128, 128, 128);
+            box-shadow: 0px 0.5px rgb(128, 128, 128);
+    padding-bottom: 5px;
+}

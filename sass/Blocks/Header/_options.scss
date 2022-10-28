@@ -1,0 +1,30 @@
+.options {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        div {
+            background: red;
+            text-align: center;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+            padding: 40px 30px;
+            width: 30%;
+            img {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 30px;
+            }
+            h4 {
+                font-size: 22px;
+                font-weight: 700;
+                margin: 0 0 30px 0;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.5;
+                color: #848484;
+            }
+        }
+    }
+}

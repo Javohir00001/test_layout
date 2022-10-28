@@ -1,0 +1,93 @@
+.doctors {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+.doctor {
+    display: flex;
+    background-color: #fff;
+    width: 48%; 
+    position: relative;
+    box-shadow: 0px 2px 15px rgb(44 73 100 / 8%);
+    padding: 30px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    .doctor__image {
+        width: 150px; 
+        height: 150px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+}
+.doctor:nth-child(1) .doctor__image {
+    background-image: url("../images/download.webp");
+}
+.doctor:nth-child(2) .doctor__image {
+    background-image: url("../images/download2.webp");
+}
+.doctor:nth-child(3) .doctor__image {
+    background-image: url("../images/download3.webp");
+}
+
+.doctor__info {
+    padding-left: 30px;
+    h4 {
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #2c4964;
+    }
+    span {
+        display: block;
+        font-size: 15px;
+        padding-bottom: 10px;
+        position: relative;
+        font-weight: 500;
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: #b2c8dd;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    p {
+        max-height: 300px;
+        margin: 10px 0 0 0;
+        font-size: 14px;
+    }
+}
+.social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.social a {
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    background: #a0bcd5;
+    &:hover {
+        background: #1973a7;
+    }
+    i {
+        color: #fff;
+        font-size: 16px;
+        margin: 0 2px;
+    }
+}
+.social a+a {
+    margin-left: 8px;
+}

@@ -1,0 +1,83 @@
+.dropdown {
+    position: absolute;
+    width: 120%;
+    left: 50%;
+    top: 90%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+.dropdown::before {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    content: "";
+    z-index: 1;
+    border: 4px solid transparent;
+    border-top-color: #1973a7;
+}
+.dropdown::after {
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #93d8f1;
+    -webkit-box-shadow: inset 0px 3px 3px 1px #fff;
+            box-shadow: inset 0px 3px 3px 1px #fff;
+    margin: 0 auto;
+}
+.submenu {
+    height: 0px;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-box-shadow: 0px 0px 3px rgb(191, 191, 191);
+            box-shadow: 0px 0px 3px rgb(191, 191, 191);
+}
+.submenu__link {
+    display: block;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 5px;
+    border: 0.1px solid transparent;
+    -webkit-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}
+.submenu__link:hover {
+    color: #1973a7;
+    border: 0.1px solid rgba(128, 128, 128, 0.543);
+    -webkit-box-shadow: 0px 0px 3px rgb(191, 191, 191);
+            box-shadow: 0px 0px 3px rgb(191, 191, 191);
+}
+.menu__link.active + .dropdown {
+    padding-top: 8px;
+}
+.menu__link.active + .dropdown::before {
+    border-color: transparent;
+    border-bottom-color: #1973a7;
+}
+.menu__link.active + .dropdown::after {
+    position: absolute;
+    bottom: -5px;    
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 0;
+}
+.menu__link.active + .dropdown .submenu{
+    -webkit-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+    overflow: visible;
+    padding: 20px 0;
+    height: auto;
+    border: 1px solid rgba(128, 128, 128, 0.52);
+    border-top: 0px;
+}
